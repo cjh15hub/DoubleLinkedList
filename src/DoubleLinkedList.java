@@ -112,7 +112,7 @@ public class DoubleLinkedList {
 		getNode(position).term = str;	
 	}
 	
-	private LinkNode getNode(int position) throws Exception{
+	public LinkNode getNode(int position) throws Exception{
 		if(position < 0 || position >=size){
 			throw new Exception("Out of bounds");
 		}
@@ -179,13 +179,13 @@ public class DoubleLinkedList {
 	
 
 	
-	private class LinkNode {
+	public class LinkNode {
 		
 		LinkNode previous_node;
 		LinkNode next_node;
 		String term;
 		
-		public LinkNode(String term){
+		protected LinkNode(String term){
 			this.term = term;
 		}
 		
